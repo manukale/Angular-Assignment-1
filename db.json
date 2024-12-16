@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+      "email": "manasi@gmail.com",
+      "password:": "manasi",
+      "role": "Student",
+      "name": "manasi",
+      "dept": "CSE",
+      "id": "6adc"
+    },
+    {
+      "email": "abhijeet@gmail.com",
+      "password:": "admin@123",
+      "role": "Teacher",
+      "name": "Abhijeet",
+      "dept": "Mech",
+      "id": "0a61"
+    },
+    {
+      "email": "Sai@gmail.com",
+      "password:": "sai@123",
+      "role": "Admin",
+      "name": "Sai",
+      "dept": "Admin",
+      "id": "1da5"
+    },
+    {
+      "email": "shraddha@gmail.com",
+      "password:": "admin@123",
+      "role": "Student",
+      "name": "Shraddha",
+      "dept": "Civil",
+      "id": "121c"
+    },
+    {
+      "email": "manali@gmail.com",
+      "password:": "manali",
+      "role": "Teacher",
+      "name": "manali",
+      "dept": "CSE",
+      "id": "9fbf"
+    },
+    {
+      "email": "akash@gmail.com",
+      "password:": "akash",
+      "role": "Teacher",
+      "name": "akash",
+      "dept": "Mech",
+      "id": "de9a"
+    },
+    {
+      "email": "vaishnavi@gmail.com",
+      "password:": "vaishnavi",
+      "role": "Teacher",
+      "name": "Vaishnavi",
+      "dept": "CSE",
+      "id": "02ca"
+    },
+    {
+      "id": "63ba",
+      "name": "user",
+      "email": "manasikale24@gmail.com",
+      "dept": "mech",
+      "password": "12345678",
+      "role": "Admin"
+    },
+    {
+      "id": "4ee8",
+      "name": "Manasi Kale",
+      "email": "manasikale@gmail.com",
+      "dept": "cse",
+      "password": "12345678",
+      "role": "Admin"
+    }
+  ]
+}
