@@ -1,53 +1,93 @@
 <nav class="navbar navbar-expand-lg " style="background-color: #9bcbde">
     <div class="container-fluid">
-        <h4>Hello,user</h4>      
+        <div style="display: flex; flex-direction: column;">
+            <h4>Hello,{{user.userName}}</h4>
+            <h6>{{user.dept}} , {{user.role}}</h6>
+        </div>
 
         <button class="btn " type="submit" (click)="signOut()">Signout</button>
     </div>
 </nav>
 
-<div class="accordion " id="accordionFlushExample" style="width: 250px; height: 1500px; ">
-    
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="btn" type="button" style="width: 250px;" (click)="showStudent()">
-                Student
-            </button>
-        </h2>
+<div style="display: flex; flex-direction: row;">
+    <div>
+
+        <div class="accordion " id="accordionFlushExample" style="width: 250px;  ">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="btn" type="button" style="width: 250px;" (click)="showStudent()">
+                        Student
+                    </button>
+                </h2>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="btn" type="button" style="width: 250px;">
+                        Profile manager
+                    </button>
+                </h2>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="btn" type="button" style="width: 250px;">
+                        Reset Password
+                    </button>
+                </h2>
+            </div>
+        </div>
     </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="btn" type="button" style="width: 250px;">
-                Profile manager
-            </button>
-        </h2>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="btn" type="button" style="width: 250px;">
-                Reset Password
-            </button>
-        </h2>
+    <div style="display: flex; flex-direction: column;">
+
+        <div class="row " style="margin: 5px; gap: 3px; ">
+            <h5>Add Student:</h5><br>
+            <form style="display: flex; flex-direction: row; justify-content: space-between;" >
+                <label> Name : </label>
+                <input class="form-control-sm" />
+                <label> Email : </label>
+                <input />
+                <label> Department : </label>
+                <input />
+                <label> Role : </label>
+                <input />
+                <button class="btn btn-primary">Add</button>
+            </form>
+        </div>
+
+        <div style="margin: 30px;">
+            <table class="table table-light table-hover " style="width: 900px;">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Role</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let students of student">
+                        <td>{{ students.id }}</td>
+                        <td>{{ students.name }}</td>
+                        <td>{{ students.email }}</td>
+                        <td>{{ students.dept }}</td>
+                        <td>{{ students.role }}</td>
+                        <td>
+                            <button class="btn btn-outline-success">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-
-
-   
-    <table class="table table-warning table-striped">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>UserName</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let student of student">
-            <td>{{ student.id }}</td>
-            <td>{{ student.name }}</td>
-            <td>{{ student.role }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-
+<!-- <button (click)="showData()">show</button> -->

@@ -2,7 +2,7 @@
   "user": [
     {
       "email": "manasi@gmail.com",
-      "password:": "manasi",
+      "password": "manasi",
       "role": "Student",
       "name": "manasi",
       "dept": "CSE",
@@ -10,7 +10,7 @@
     },
     {
       "email": "abhijeet@gmail.com",
-      "password:": "admin@123",
+      "password": "admin@123",
       "role": "Teacher",
       "name": "Abhijeet",
       "dept": "Mech",
@@ -18,7 +18,7 @@
     },
     {
       "email": "Sai@gmail.com",
-      "password:": "sai@123",
+      "password": "sai@123",
       "role": "Admin",
       "name": "Sai",
       "dept": "Admin",
@@ -26,7 +26,7 @@
     },
     {
       "email": "shraddha@gmail.com",
-      "password:": "admin@123",
+      "password": "admin@123",
       "role": "Student",
       "name": "Shraddha",
       "dept": "Civil",
@@ -34,7 +34,7 @@
     },
     {
       "email": "manali@gmail.com",
-      "password:": "manali",
+      "password": "manali",
       "role": "Teacher",
       "name": "manali",
       "dept": "CSE",
@@ -42,7 +42,7 @@
     },
     {
       "email": "akash@gmail.com",
-      "password:": "akash",
+      "password": "akash",
       "role": "Teacher",
       "name": "akash",
       "dept": "Mech",
@@ -50,7 +50,7 @@
     },
     {
       "email": "vaishnavi@gmail.com",
-      "password:": "vaishnavi",
+      "password": "vaishnavi",
       "role": "Teacher",
       "name": "Vaishnavi",
       "dept": "CSE",
@@ -70,6 +70,14 @@
       "email": "manasikale@gmail.com",
       "dept": "cse",
       "password": "12345678",
+      "role": "Admin"
+    },
+    {
+      "id": "8d25",
+      "name": "manasi",
+      "email": "manasi@gmail",
+      "dept": "mech",
+      "password": "147258369",
       "role": "Admin"
     }
   ]

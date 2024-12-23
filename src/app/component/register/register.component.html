@@ -4,7 +4,7 @@
         <h3 class="heading"> Register User... </h3>
         <label>Enter Name:</label>
         <input placeholder="Enter Name Here" type="text" name="name" formControlName="name" />
-        <div *ngIf="myForm.get('name')?.invalid " class="text-danger">
+        <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched " class="text-danger">
             Name is required
         </div>
 

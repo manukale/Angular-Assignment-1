@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule, FormsModule,HttpClientModule],
+  imports: [RouterModule, FormsModule, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -18,7 +18,7 @@ export class LoginComponent {
     password: '',
     role: ''
   }
-  constructor(private router: Router , private userService: UserDataService) {
+  constructor(private router: Router, private userService: UserDataService) {
     this.user = {
       email: '',
       password: '',
@@ -30,7 +30,7 @@ export class LoginComponent {
       this.userData = res;
     });
   }
-  
+
   ngOnInit() {
     this.fetchData();
   }
@@ -41,37 +41,60 @@ export class LoginComponent {
       alert('Please Fill All The Details...')
 
     }
-    if (data.role === 'Student') {
-      console.log('this is student role ');
-      alert('Invalid Credentials')
-    }
 
-    if (data.role === 'Teacher') {
-      console.log('this is teacher role');
-      // for (let index = 0; index < this.userData.length; index++) {
-      //   console.log(data.email,'***',this.userData[index].email);
-      //   if (data.email === this.userData[index].email && data.password === this.userData[index].password) {
-      //     alert('Login Successfully...')
-      //     this.router.navigate(['/home'], {})
-      //     break;
-      //   }
-        
-      // }
-      if (data.email === "manasikale24@gmail.com" && data.password === "manasi") {
+    for (let index = 0; index < this.userData.length; index++) {
+      // console.log('this is teacher role');
+
+      if (data.email === this.userData[index].email && data.password === this.userData[index].password && data.role === this.userData[index].role) {
+        // console.log(this.userData[index].name);
+        // this.router.navigate(['/home'], {})   //query.param
         alert('Login Successfully...')
-        this.router.navigate(['/home'], {})
-       
-      }else{
-        alert("Invalid Credentials...")
+        if (this.userData[index].role === 'Teacher') {
+
+          this.router.navigate(['/home', this.userData[index].id], {
+            // queryParams : this.userData[index].name && this.userData[index].role
+            queryParams: {
+              name: this.userData[index].name,
+              role: this.userData[index].role,
+              dept: this.userData[index].dept,
+            }
+          })   //query.param
+          // break;
+        }
+        if (this.userData[index].role === 'Admin') {
+
+          console.log('Admin');
+          this.router.navigate(['/admin'], {
+            // queryParams : this.userData[index].name && this.userData[index].role
+            // queryParams: {
+            //   name: this.userData[index].name,
+            //   role: this.userData[index].role,
+            //   dept: this.userData[index].dept,
+            // }
+          })
+          
+        }
+        if (this.userData[index].role === 'Student') {
+          this.router.navigate(['/student'], {
+            // queryParams : this.userData[index].name && this.userData[index].role
+            // queryParams: {
+            //   name: this.userData[index].name,
+            //   role: this.userData[index].role,
+            //   dept: this.userData[index].dept,
+            // }
+          })
+          
+        }
       }
-       
-    }
-
-    if (data.role === 'Admin') {
-      console.log('this is admin role');
-      alert('Invalid Credentials')
+      // else{
+      //   alert('Check Your Credentials...')
+      //   break;
+      // }
 
     }
+    
+
+
 
   }
 }
